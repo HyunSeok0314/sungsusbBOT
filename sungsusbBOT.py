@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -43,7 +44,8 @@ async def on_message(message):
     elif message.content.startswith("성섭아"):
         await message.channel.send("?")
 
-client.run("NzA3ODMwMTc0ODY3MTI4MzMx.XrStqg._342zl5D_EHaKGqNwPbZbiBkvLk")
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
 
 
 
@@ -60,3 +62,4 @@ client.run("NzA3ODMwMTc0ODY3MTI4MzMx.XrStqg._342zl5D_EHaKGqNwPbZbiBkvLk")
 
 
 
+ 
