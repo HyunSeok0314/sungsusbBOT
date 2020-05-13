@@ -28,10 +28,10 @@ async def on_message(message):
         atr1 = message.guild.get_member(336425833403252746)
         msg = message.content[4:]
         if msg == "":
-            await message.channel.send(message.author.mention + "님의 문의" + "```css\n문의 내용을 적어주세요.(+문의 [내용])\n```")
+            await message.channel.send(message.author.mention + "```css\n문의 내용을 적어주세요.(+문의 [내용])\n```")
         else:
-            await atr1.send(message.author.mention + "님의 문의" + "```css\n%s```(관리자 : <@653172394499768322>, <@336425833403252746>)"%msg)
-            await atr.send(message.author.mention + "```css\n%s```(관리자 : <@653172394499768322>, <@336425833403252746>)"%msg)
+            await atr1.send(message.author.mention + " 님의 문의 ┐" + "```css\n%s```(관리자 : <@653172394499768322>, <@336425833403252746>)"%msg)
+            await atr.send(message.author.mention + " 님의 문의 ┐" + "```css\n%s```(관리자 : <@653172394499768322>, <@336425833403252746>)"%msg)
             await message.channel.send(message.author.mention + "```css\n정상적으로 문의를 보냈습니다.\n```")
 
     elif message.content.startswith("+관리자"):
