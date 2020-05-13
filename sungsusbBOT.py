@@ -30,15 +30,15 @@ async def on_message(message):
         if msg == "":
             await message.channel.send(message.author.mention + "```css\n문의 내용을 적어주세요.(+문의 [내용])\n```")
         else:
-            await atr1.send("\n※" + message.author.mention + " 님의 문의 ┐" + "```css\n%s```(관리자 : <@653172394499768322>, <@336425833403252746>)\n※"%msg)
-            await atr.send("\n※" + message.author.mention + " 님의 문의 ┐" + "```css\n%s```(관리자 : <@653172394499768322>, <@336425833403252746>)\n※"%msg)
+            await atr1.send("※\n" + message.author.mention + " 님의 문의 ┐" + "```css\n%s```(관리자 : <@653172394499768322>, <@336425833403252746>)\n※"%msg)
+            await atr.send("※\n" + message.author.mention + " 님의 문의 ┐" + "```css\n%s```(관리자 : <@653172394499768322>, <@336425833403252746>)\n※"%msg)
             await message.channel.send(message.author.mention + "```css\n정상적으로 문의를 보냈습니다.\n```")
 
     elif message.content.startswith("+관리자"):
         atr = message.guild.get_member(336425833403252746)
         msg = message.content[5:]
         if msg == "소환":
-            await atr.send("\n※" + message.author.mention + "님이 영옥이방에서 당신을 부릅니다 (방장 : <@336425833403252746>)\n※")
+            await atr.send("※\n" + message.author.mention + "님이 영옥이방에서 당신을 부릅니다 (방장 : <@336425833403252746>)\n※")
             await message.channel.send(message.author.mention + "```css\n정상적으로 메세지를 보냈습니다.\n(다소 시간이 걸릴 수 있음.)\n```")
         elif msg == "정보":
             await message.channel.send(message.author.mention + "```css\n이름 : 김성진\n나이 : 16\n학교 : 동백중학교\n관리자가 이전될때마다 변경됩니다.\n[추가중...]\n```")
