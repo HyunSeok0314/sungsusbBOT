@@ -8,7 +8,7 @@ async def on_ready():
     print(client.user.id)
     print("완료")
     game = discord.Game("'+도움말'로 명령어 확인")
-    await client.change_presence(status=discord.Status.idle, activity=game)
+    await client.change_presence(status=discord.Status.online, activity=game)
 
 @client.event
 async def on_message(message):
@@ -30,8 +30,8 @@ async def on_message(message):
         if msg == "":
             await message.channel.send(message.author.mention + "```css\n문의 내용을 적어주세요.(+문의 [내용])\n```")
         else:
-            await atr1.send(message.author.mention + "```css%s```관리자 : <@653172394499768322><@336425833403252746>"%msg)
-            await atr.send(message.author.mention + "```css%s```관리자 : <@653172394499768322><@336425833403252746>"%msg)
+            await atr1.send(message.author.mention + "```css\n%s```(관리자 : <@653172394499768322>, <@336425833403252746>)"%msg)
+            await atr.send(message.author.mention + "```css\n%s```(관리자 : <@653172394499768322>, <@336425833403252746>)"%msg)
             await message.channel.send(message.author.mention + "```css\n정상적으로 문의를 보냈습니다.\n```")
 
     elif message.content.startswith("+관리자"):
